@@ -38,6 +38,7 @@ public class BuildManager : MonoBehaviour
         }
 
         PlayerStats.money -= turretToBuild.cost;
+        PlayerStats.dragonFragments -= turretToBuild.dfcost;
         buildSFX.Play();
 
         GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
